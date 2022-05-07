@@ -39,7 +39,7 @@ def hilite_me(code, lexer, options, style, linenos, divstyles):
     return html
 
 def get_default_style():
-    return 'border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;'
+    return 'padding:.6em' #'border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;'
 
 def insert_line_numbers(html):
     match = re.search('(<pre[^>]*>)(.*)(</pre>)', html, re.DOTALL)
@@ -55,3 +55,6 @@ def insert_line_numbers(html):
     lines = '\n'.join(format % i for i in numbers)
     html = html.replace(pre_open, '<table><tr><td>' + pre_open + lines + '</pre></td><td>' + pre_open)
     return html
+
+def cmp(a, b):
+     return (a > b) - (a < b)

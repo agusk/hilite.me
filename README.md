@@ -1,5 +1,9 @@
 # hilite.me
 
+7 May 2022: Updated for the latest Python and pygments.
+
+---------------
+
 [hilite.me](http://hilite.me/) is a small webapp that converts your code
 snippets into pretty-printed HTML format, easily embeddable into blog posts and
 websites.
