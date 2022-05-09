@@ -31,11 +31,12 @@ def hilite_me(code, lexer, options, style, linenos, divstyles):
                               noclasses=True,
                               cssclass='',
                               cssstyles=defstyles + divstyles,
+                              nobackground = True,
                               prestyles='margin: 0')
     html = highlight(code, get_lexer_by_name(lexer, **options), formatter)
     if linenos:
         html = insert_line_numbers(html)
-    html = "<!-- HTML generated using hilite.me -->" + html
+    #html = "<!-- HTML generated using hilite.me -->" + html
     return html
 
 def get_default_style():
